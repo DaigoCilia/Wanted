@@ -17,7 +17,7 @@ const game = new Phaser.Game(config);
 
 let score = 0;
 let personaje;
-let personajes = ['../img/Daigo.png', '../img/Spidey.png']; // lista de personajes
+let personajes = ['Daigo.png', 'Spidey.png']; // lista de personajes
 let indexPersonaje = 0;
 
 function preload(){
@@ -62,4 +62,5 @@ function create() {
         indexPersonaje = (indexPersonaje + 1) % personajes.length;
         personaje.setTexture('player' + (indexPersonaje + 1));
     });
+
 }
