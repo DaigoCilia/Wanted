@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  height: 100vh;
+   /* Creamos un gradiente más grande que la pantalla para poder moverlo */
+  background: linear-gradient(-45deg, #ce1a0d, #5c023e, #aca91e, #ffe600);
+  background-size: 400% 400%; /* Importante: el fondo debe ser más grande */
+  animation: movimientoFondo 15s ease infinite; /* Animación infinita */
+  color: rgb(255, 208, 0);
+  font-family: Arial;
+  text-align: center;
+}
+
+/* Definimos el movimiento del gradiente */
+@keyframes movimientoFondo {
+    0% {
+        /* Al inicio de la animación, el fondo está en su posición original */
+        background-position: 0% 50%;
+    }
+    50% {
+        /* A la mitad del tiempo el fondo se ha desplazado totalmente a la derecha */
+        background-position: 100% 50%;
+    }
+    100% {
+        /* Al final, regresa al inicio para que el ciclo se repita sin saltos bruscos. */
+        background-position: 0% 50%;
+    }
+}
+
+#titulo {
+  font-size: 10vw;
+  font-family: 'Asimovian';
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #fbff00, 0 0 10px #ff3f3f;
+}
+
+#score {
+  font-size: 5vw;
+  font-family: 'Asimovian';
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #fbff00, 0 0 10px #ff3f3f;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}
